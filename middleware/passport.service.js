@@ -1,4 +1,4 @@
-var GoogleStrategy = require("passport-google-oauth2").Strategy;
+var GoogleStrategy = require('passport-google-oauth2').Strategy;
 const config = require('../config.json');
 const passport = require('passport');
 const users = require("../models/user.model");
@@ -17,7 +17,7 @@ var strategy = new GoogleStrategy(
   {
     clientID: config.google.clientId,
     clientSecret: config.google.clientSecret,
-    callbackURL: "http://localhost:3001/auth/google/callback",
+    callbackURL: 'http://localhost:3001/auth/google/callback',
     passReqToCallback: true,
   },
   function (request, accessToken, refreshToken, profile, done) {
